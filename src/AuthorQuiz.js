@@ -6,11 +6,11 @@ import Turn from './components/Turn/Turn';
 import Continue from './components/Continue/Continue';
 import Footer from './components/Footer/Footer';
 
-function AuthorQuiz({turnData}) {
+function AuthorQuiz({turnData, highlight, onAnswerSelected}) {
   return (
     <div className="container-fluid">
       <Hero />
-      <Turn {...turnData}/>
+      <Turn {...turnData} highlight={highlight} onAnswerSelected={onAnswerSelected}/>
       <Continue />
       <Footer/>
     </div>
