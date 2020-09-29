@@ -1,7 +1,9 @@
-import React from 'react';
+import React, {Fragment} from 'react';
 import ReactDOM from 'react-dom';
+import {BrowserRouter, Route} from 'react-router-dom';
 import './index.css';
 import AuthorQuiz from './AuthorQuiz';
+import AddAuthorForm from './components/AddAuthorForm/AddAuthorForm'
 //import * as registerServiceWorker from './serviceWorker';
 import {shuffle, sample} from 'underscore';
 //import { render } from '@testing-library/react';
@@ -74,10 +76,19 @@ function onAnswerSelected(answer){
   rendering();
 }
 
+function App(){
+  return <AuthorQuiz {...state} onAnswerSelected={onAnswerSelected} />
+}
+
 function rendering(){
 ReactDOM.render(
 
-    <AuthorQuiz {...state} onAnswerSelected={onAnswerSelected}/>,
+  <BrowserRouter>
+    <Fragment>
+      <Route exact path="/" component={App}/>
+      <Route path="/add" component={AddAuthorForm}/>
+    </Fragment>
+  </BrowserRouter>,
   
   document.getElementById('root')
 )
