@@ -27,11 +27,11 @@ function Turn({author, books, highlight, onAnswerSelected}) {
     }
 
     return( 
-    <div className="row turn" style={{backgroundColor: highlightToBgColor(highlight)}}>
-        <div className="col-4 offset-1">
-            <img src={author.imageUrl} className="authorimage" alt="Author" />
+    <div className="turn" style={{backgroundColor: highlightToBgColor(highlight)}}>
+        <div>
+            <img src={author.imageUrl} className="mx-auto d-block" alt="Author" />
         </div>
-        <div className="col-6">
+        <div className="answers mx-auto d-block">
             {books.map((title) => <Book title={title} key={title} onClick={onAnswerSelected}/>)}
             </div>
         

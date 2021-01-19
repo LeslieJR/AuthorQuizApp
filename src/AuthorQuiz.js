@@ -30,7 +30,7 @@ const AuthorQuiz = connect(mapStateToProps, mapDispatchToProps) (function Author
       <Hero />
       <Turn {...turnData} highlight={highlight} onAnswerSelected={onAnswerSelected}/>
       <Continue show={highlight === 'correct'} onContinue={onContinue}/>
-      <p><Link to="/add">Add an author</Link></p>
+      <p className="offset-1"><Link to="/add">Add an author</Link></p>
       <Footer/>
     </div>
   );

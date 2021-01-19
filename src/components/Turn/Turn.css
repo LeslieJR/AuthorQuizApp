@@ -1,11 +1,32 @@
-.turn > div {
-    height: 400px;
-}
+
+
+
 
 .turn{
-    padding-top: 20px;
+   
     padding-bottom: 20px;
 }
-.authorimage{
-    max-height: 100%;
+.turn img{
+    width: 55%;
+}
+.answers{
+    margin-top: 1rem;
+    width: 90%;
+}
+
+@media screen and (min-width: 576px) {
+    .turn img{
+        width: 55%;
+    }
+}
+
+@media screen and (min-width: 768px ){
+   
+}
+@media screen and (min-width: 992px ){
+    
+}
+
+@media screen and (min-width: 1140px ){
+    
 }

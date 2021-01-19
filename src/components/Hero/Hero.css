@@ -1,0 +1,27 @@
+.header{
+    padding: 2rem 1rem;
+    background-color: #e9ecef;
+    border-radius: .3rem;
+    margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 576px) {
+    .header{
+        flex: 0 0 95%;
+        max-width: 95%;
+        position: relative;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 768px ){
+    
+}
+@media screen and (min-width: 992px ){
+    
+}
+@media screen and (min-width: 1140px ){
+    
+}
+
+
